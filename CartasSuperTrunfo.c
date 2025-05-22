@@ -33,29 +33,31 @@ int main() {
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     
-   // Entrada de dados da Carta 1
-    printf("Informe o Estado da Carta 1 (A-H): ");
+     // Cadastro da Carta 1
+    printf("Cadastro da Carta 1:\n");
+
+    printf("Digite o Estado (A-H): ");
     scanf(" %c", &estado1);
 
-    printf("Informe o Codigo da Carta 1 (Ex: A01): ");
+    printf("Digite o Código da Cidade (Ex: A01): ");
     scanf("%s", codigo1);
 
-    printf("Informe o Nome da Cidade da Carta 1: ");
-    scanf(" %[^\n]", nomeCidade1);
+    printf("Digite o Nome da Cidade: ");
+    scanf(" %[^\n]", nome1); // lê até a quebra de linha, permitindo espaços
 
-    printf("Informe a Populacao da Carta 1: ");
+    printf("Digite a População: ");
     scanf("%d", &populacao1);
 
-    printf("Informe a Area da Carta 1 (em km2): ");
+    printf("Digite a Área (em km²): ");
     scanf("%f", &area1);
 
-    printf("Informe o PIB da Carta 1 (em bilhoes): ");
+    printf("Digite o PIB (em bilhões de reais): ");
     scanf("%f", &pib1);
 
-    printf("Informe o Numero de Pontos Turisticos da Carta 1: ");
+    printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos1);
 
-    printf("\n");
+    printf("\n"); // espaço entre as cartas
 
     // Cadastro da Carta 2
     printf("Cadastro da Carta 2:\n");
@@ -83,11 +85,7 @@ int main() {
 
     printf("\n");
 
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
-    // Exibição dos dados da Carta 1
+     // Exibição dos dados da Carta 1
     printf("Carta 1:\n");
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
@@ -98,7 +96,6 @@ int main() {
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
 
     printf("\n");
-
 
     // Exibição dos dados da Carta 2
     printf("Carta 2:\n");
