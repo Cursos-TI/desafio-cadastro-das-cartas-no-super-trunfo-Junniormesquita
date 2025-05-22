@@ -7,7 +7,7 @@
 //Teste Junnior
 
 int main() {
-    printf("Desafio iniciante junnior\n");
+    printf("Super trunfo junnior\n");
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
 
@@ -33,31 +33,29 @@ int main() {
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     
-    // Cadastro da Carta 1
-    printf("Cadastro da Carta 1:\n");
-
-    printf("Digite o Estado (A-H): ");
+   // Entrada de dados da Carta 1
+    printf("Informe o Estado da Carta 1 (A-H): ");
     scanf(" %c", &estado1);
 
-    printf("Digite o Código da Cidade (Ex: A01): ");
+    printf("Informe o Codigo da Carta 1 (Ex: A01): ");
     scanf("%s", codigo1);
 
-    printf("Digite o Nome da Cidade: ");
-    scanf(" %[^\n]", nome1); // lê até a quebra de linha, permitindo espaços
+    printf("Informe o Nome da Cidade da Carta 1: ");
+    scanf(" %[^\n]", nomeCidade1);
 
-    printf("Digite a População: ");
+    printf("Informe a Populacao da Carta 1: ");
     scanf("%d", &populacao1);
 
-    printf("Digite a Área (em km²): ");
+    printf("Informe a Area da Carta 1 (em km2): ");
     scanf("%f", &area1);
 
-    printf("Digite o PIB (em bilhões de reais): ");
+    printf("Informe o PIB da Carta 1 (em bilhoes): ");
     scanf("%f", &pib1);
 
-    printf("Digite o Número de Pontos Turísticos: ");
+    printf("Informe o Numero de Pontos Turisticos da Carta 1: ");
     scanf("%d", &pontosTuristicos1);
 
-    printf("\n");  // espaço entre as cartas
+    printf("\n");
 
     // Cadastro da Carta 2
     printf("Cadastro da Carta 2:\n");
