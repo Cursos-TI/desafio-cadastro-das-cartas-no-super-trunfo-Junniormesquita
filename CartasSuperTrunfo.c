@@ -7,12 +7,12 @@
 //Teste Junnior
 
 int main() {
-    printf("Desafio iniciante junnior")
+    printf("Desafio iniciante junnior\n");
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
 
     // Variáveis da primeira cidade
-    ;char estado1;
+    char estado1;
     char codigo1[4];
     char nome1[50];
     int populacao1;
