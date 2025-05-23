@@ -1,31 +1,29 @@
 #include <stdio.h>
 
 int main() {
-    // Dados da Carta 1
+    // ===== Dados da Carta 1 =====
     char estado1;
     char codigo1[4];
     char nome1[50];
-    unsigned long int populacao1;
+    int populacao1;
     float area1;
     float pib1;
     int pontos1;
     float densidade1;
     float pibPerCapita1;
-    float superPoder1;
 
-    // Dados da Carta 2
+    // ===== Dados da Carta 2 =====
     char estado2;
     char codigo2[4];
     char nome2[50];
-    unsigned long int populacao2;
+    int populacao2;
     float area2;
     float pib2;
     int pontos2;
     float densidade2;
     float pibPerCapita2;
-    float superPoder2;
 
-    // Entrada dos dados da carta 1
+    // ===== Entrada dos dados da Carta 1 =====
     printf("Digite o estado (A-H): ");
     scanf(" %c", &estado1);
     while (getchar() != '\n');
@@ -39,7 +37,7 @@ int main() {
     while (getchar() != '\n');
 
     printf("Digite a populacao: ");
-    scanf("%lu", &populacao1);
+    scanf("%d", &populacao1);
     while (getchar() != '\n');
 
     printf("Digite a area (km2): ");
@@ -54,7 +52,7 @@ int main() {
     scanf("%d", &pontos1);
     while (getchar() != '\n');
 
-    // Entrada dos dados da carta 2
+    // ===== Entrada dos dados da Carta 2 =====
     printf("\nDigite o estado (A-H): ");
     scanf(" %c", &estado2);
     while (getchar() != '\n');
@@ -68,7 +66,7 @@ int main() {
     while (getchar() != '\n');
 
     printf("Digite a populacao: ");
-    scanf("%lu", &populacao2);
+    scanf("%d", &populacao2);
     while (getchar() != '\n');
 
     printf("Digite a area (km2): ");
@@ -83,34 +81,25 @@ int main() {
     scanf("%d", &pontos2);
     while (getchar() != '\n');
 
-    // Calculos Carta 1
+    // ===== Cálculo da Densidade e PIB per Capita =====
     densidade1 = populacao1 / area1;
-    pibPerCapita1 = (pib1 * 1000000000) / populacao1;
-    superPoder1 = (float)populacao1 + area1 + pib1 + pontos1 + pibPerCapita1 + (1 / densidade1);
+    pibPerCapita1 = (pib1 * 1000000000) / populacao1; // PIB em reais
 
-    // Calculos Carta 2
     densidade2 = populacao2 / area2;
     pibPerCapita2 = (pib2 * 1000000000) / populacao2;
-    superPoder2 = (float)populacao2 + area2 + pib2 + pontos2 + pibPerCapita2 + (1 / densidade2);
 
-    // Comparações
-    int vPop = populacao1 > populacao2;
-    int vArea = area1 > area2;
-    int vPib = pib1 > pib2;
-    int vPontos = pontos1 > pontos2;
-    int vDensidade = densidade1 < densidade2; // menor vence na densidade
-    int vPibPerCapita = pibPerCapita1 > pibPerCapita2;
-    int vSuperPoder = superPoder1 > superPoder2;
+    // ===== Comparação por População =====
+    printf("\n--- Comparacao de Cartas (Atributo: Populacao) ---\n");
+    printf("Carta 1 - %s (%c): %d habitantes\n", nome1, estado1, populacao1);
+    printf("Carta 2 - %s (%c): %d habitantes\n", nome2, estado2, populacao2);
 
-    // Resultados das Comparações
-    printf("\nComparacao de Cartas:\n");
-    printf("Populacao: Carta %d venceu (%d)\n", vPop ? 1 : 2, vPop);
-    printf("Area: Carta %d venceu (%d)\n", vArea ? 1 : 2, vArea);
-    printf("PIB: Carta %d venceu (%d)\n", vPib ? 1 : 2, vPib);
-    printf("Pontos Turisticos: Carta %d venceu (%d)\n", vPontos ? 1 : 2, vPontos);
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", vDensidade ? 1 : 2, vDensidade);
-    printf("PIB per Capita: Carta %d venceu (%d)\n", vPibPerCapita ? 1 : 2, vPibPerCapita);
-    printf("Super Poder: Carta %d venceu (%d)\n", vSuperPoder ? 1 : 2, vSuperPoder);
+    if (populacao1 > populacao2) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", nome1);
+    } else if (populacao2 > populacao1) {
+        printf("Resultado: Carta 2 (%s) venceu!\n", nome2);
+    } else {
+        printf("Resultado: Empate!\n");
+    }
 
     return 0;
 }
