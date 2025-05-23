@@ -26,46 +26,60 @@ int main() {
     // Entrada dos dados da carta 1
     printf("Digite o estado (A-H): ");
     scanf(" %c", &estado1);
+    while (getchar() != '\n'); // limpa o buffer
 
     printf("Digite o codigo da carta (Ex: A01): ");
     scanf("%s", codigo1);
+    while (getchar() != '\n'); // limpa o buffer
 
     printf("Digite o nome da cidade: ");
-    scanf(" %[^\n]", nome1);
+    scanf("%[^\n]", nome1);
+    while (getchar() != '\n'); // limpa o buffer
 
     printf("Digite a populacao: ");
     scanf("%d", &populacao1);
+    while (getchar() != '\n'); // limpa o buf
 
     printf("Digite a area (km2): ");
     scanf("%f", &area1);
+    while (getchar() != '\n'); // limpa o buf
 
     printf("Digite o PIB (em bilhoes): ");
     scanf("%f", &pib1);
+    while (getchar() != '\n'); // limpa o buf
 
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontos1);
+    while (getchar() != '\n'); // limpa o buffer
 
     // Entrada dos dados da carta 2
     printf("\nDigite o estado (A-H): ");
     scanf(" %c", &estado2);
+    while (getchar() != '\n'); // limpa o buffer
 
     printf("Digite o codigo da carta (Ex: B02): ");
     scanf("%s", codigo2);
+    while (getchar() != '\n'); // limpa o buffer
 
     printf("Digite o nome da cidade: ");
-    scanf(" %[^\n]", nome2);
+    scanf("%[^\n]", nome2);
+    while (getchar() != '\n'); // limpa o buffer
 
     printf("Digite a populacao: ");
     scanf("%d", &populacao2);
+    while (getchar() != '\n'); // limpa o buf
 
     printf("Digite a area (km2): ");
     scanf("%f", &area2);
+    while (getchar() != '\n'); // limpa o buf
 
     printf("Digite o PIB (em bilhoes): ");
     scanf("%f", &pib2);
+    while (getchar() != '\n'); // limpa o buf
 
     printf("Digite o numero de pontos turisticos: ");
     scanf("%d", &pontos2);
+    while (getchar() != '\n'); // limpa o buffer
 
     // Calculo densidade e PIB per capita da carta 1
     densidade1 = populacao1 / area1;
